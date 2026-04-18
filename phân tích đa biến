@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 
 # Nạp dữ liệu bệnh tiểu đường từ thư mục data
-df_diabetes = pd.read_csv('data/pima-indians-diabetes.csv')
+df_diabetes = pd.read_csv('data/pima-indians-diabetes.csv', header=None, names=['Pregnancies', 'Glucose', 'BloodPressure', 'SkinThickness', 'Insulin', 'BMI', 'DiabetesPedigreeFunction', 'Age', 'Outcome'])
 
 # Kiểm tra 5 dòng đầu tiên xem dữ liệu có đúng chưa
 print(df_diabetes.head())
