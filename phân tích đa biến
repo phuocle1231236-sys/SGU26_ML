@@ -1,0 +1,12 @@
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+# Nạp dữ liệu bệnh tiểu đường từ thư mục data
+df_diabetes = pd.read_csv('data/pima-indians-diabetes.csv')
+
+# Kiểm tra 5 dòng đầu tiên xem dữ liệu có đúng chưa
+print(df_diabetes.head())
+
+# Kiểm tra thông tin cơ bản để xem có cột nào bị thiếu dữ liệu không
+print(df_diabetes.info())
