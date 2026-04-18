@@ -10,3 +10,16 @@ print(df_diabetes.head())
 
 # Kiểm tra thông tin cơ bản để xem có cột nào bị thiếu dữ liệu không
 print(df_diabetes.info())
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+# 1. Vẽ histogram cho tất cả các biến
+df_diabetes.hist(figsize=(12, 10), bins=20)
+plt.suptitle("Phân phối của từng đặc trưng")
+plt.show()
+
+# 2. Vẽ Boxplot để xem outliers (Ví dụ cho cột BMI)
+plt.figure(figsize=(8, 4))
+sns.boxplot(x=df_diabetes['BMI'])
+plt.title("Kiểm tra outliers trong cột BMI")
+plt.show()
